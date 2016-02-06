@@ -1,0 +1,36 @@
+<div class="ಠ_ಠ">
+<section class="logo">
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 602 602">
+  <path id="circle1" class="circle_top" stroke="#178bc4" stroke-width="2" fill="#1BA1E2" fill="#1BA1E2" d="M225.874,64.573c8.1-7.51,20.753-7.034,28.263,1.068c2.245,2.42,3.76,5.252,4.588,8.228 c0.04,0.137,0.094,0.267,0.131,0.406l56.818,211.897l196.915,68.306l85.291-79.09C584.77,121.807,455.976,1.237,299,1.237 C142.573,1.237,14.132,120.967,0.263,273.78L225.874,64.573z"/>
+  <polygon class="triangle_top" stroke="#178bc4" stroke-width="2" fill="#1BA1E2" points="270.035,270.341 228.78,116.429 119.216,218.025 "/>
+  <path class="circle_bottom" stroke="#178bc4" stroke-width="2" fill="#1BA1E2" fill="#1BA1E2" d="M372.77,538.675c-6.118,5.678-14.835,6.787-21.972,3.5c-5.456-2.328-9.759-6.932-11.412-13.102 l-56.842-212.066L86.005,248.82L0.233,328.355C13.942,481.33,142.457,601.238,299,601.238 c155.916,0,284.035-118.947,298.604-271.045L372.77,538.675z"/>
+  <polygon class="triangle_bottom" stroke="#178bc4" stroke-width="2" fill="#1BA1E2" points="328.188,332.845 369.554,487.113 479.358,385.292 "/>
+</svg>
+</section>
+<header>
+<h1>Fernando Montoya</h1>
+<h2>Web developer.</h2>
+</header>
+<section class="me">
+<a href="mailto:montogeek@gmail.com" class="mail" target="_blank"><i class="fa fa-send fa-lg"></i><span>Contact</span></a>
+<a href="http://twitter.com/montogeek" class="twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i><span>Opinion</span></a>
+<a href="http://github.com/montogeek" class="github" target="_blank"><i class="fa fa-github fa-lg"></i><span>Projects</span></a>
+<a href="http://stackoverflow.com/users/1420754/montogeek" class="stack-overflow" target="_blank"><i class="fa fa-stack-overflow fa-lg"></i><span>Code help</span></a>
+<a href="http://co.linkedin.com/in/montogeek/" class="linkedin" target="_blank"><i class="fa fa-linkedin fa-lg"></i><span>Professional</span></a>
+<a href="http://montogeek.vsco.co" class="vsco" target="_blank"><i class="icon-vsco"></i><span>Pictures</span></a>
+</section>
+
+<% if (site.posts.length){ %>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+<% } %>
