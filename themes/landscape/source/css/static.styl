@@ -1,7 +1,7 @@
-animation-base-circle-top = 1782.365
-animation-base-circle-bottom = 1779.189
-animation-base-triangle-top = 468.399
-animation-base-triangle-bottom = 469.475
+animation-base-circle-top = 1782.365478515625
+animation-base-circle-bottom = 1779.189697265625
+animation-base-triangle-top = 468.39910888671875
+animation-base-triangle-bottom = 469.47528076171875
 
 animation-offset-circle = 50
 animation-offset-triangle = 10
@@ -175,57 +175,24 @@ total-width = 100%
     font-style normal
 
 @keyframes circle_top {
-	0% {
-		stroke-dashoffset animation-circle-top
-		// fill #FFFFFF
-	}
-	80% {
-		// fill #FFFFFF
-	}
-	100% {
-		stroke-dashoffset 0
-		// fill #1BA1E2
-	}
+    to {
+        stroke-dashoffset: animation-base-circle-top;
+    }
 }
-
 @keyframes circle_bottom {
-	0% {
-		stroke-dashoffset animation-circle-bottom
-		// fill #FFFFFF
-	}
-	80% {
-		// fill #FFFFFF
-	}
-	100% {
-		stroke-dashoffset 0
-		// fill #1BA1E2
-	}
+    to {
+        stroke-dashoffset: animation-base-circle-bottom;
+    }
 }
 @keyframes triangle_top {
-	0% {
-		stroke-dashoffset animation-triangle-top
-		// fill #FFFFFF
-	}
-	80% {
-		// fill #FFFFFF
-	}
-	100% {
-		stroke-dashoffset 0
-		// fill #1BA1E2
-	}
+    to {
+        stroke-dashoffset: animation-base-triangle-top;
+    }
 }
 @keyframes triangle_bottom {
-	0% {
-		stroke-dashoffset animation-triangle-bottom
-		// fill #FFFFFF
-	}
-	80% {
-		// fill #FFFFFF
-	}
-	100% {
-		stroke-dashoffset 0
-		// fill #1BA1E2
-	}
+    to {
+        stroke-dashoffset: animation-base-triangle-bottom;
+    }
 }
 
 body
@@ -254,24 +221,32 @@ body
 
 #logo
     .circle_top
-        animation circle_top 3s ease infinite
-        stroke-dasharray animation-circle-top
-        stroke-dashoffset animation-circle-top
+	animation: circle_top 6s infinite ease-in-out;
+	stroke-linecap: round;
+	stroke-dasharray: 0, 0, 450, 1332.36547852;
+	stroke-dashoffset: 0;
+	stroke-linejoin: round;
 
     .circle_bottom
-        animation circle_bottom 3s ease infinite
-        stroke-dasharray animation-circle-bottom
-        stroke-dashoffset animation-circle-bottom
+	animation: circle_bottom 6s infinite ease-in-out;
+	stroke-linecap: round;
+	stroke-dasharray: 0, 0, 450, 1329.18969727;
+	stroke-dashoffset: 0;
+	stroke-linejoin: round;
 
     .triangle_top
-        animation triangle_top 3s ease infinite
-        stroke-dasharray animation-triangle-top
-        stroke-dashoffset animation-triangle-top
+	animation: triangle_top 6s infinite ease-in-out;
+	stroke-linecap: round;
+	stroke-dasharray: 0, 0, 156.1330362955729, 312.2660725911458;
+	stroke-dashoffset: 0;
+	stroke-linejoin: round;
 
     .triangle_bottom
-        animation triangle_bottom 3s ease infinite
-        stroke-dasharray animation-triangle-bottom
-        stroke-dashoffset animation-triangle-bottom
+	animation: triangle_bottom 6s infinite ease-in-out;
+	stroke-linecap: round;
+	stroke-dasharray: 0, 0, 156.49176025390625, 312.9835205078125;
+	stroke-dashoffset: 0;
+	stroke-linejoin: round;
 
 header
     // background-color #00B1E1
